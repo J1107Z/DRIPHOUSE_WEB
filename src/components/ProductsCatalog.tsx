@@ -54,12 +54,20 @@ export default function ProductsCatalog() {
   const [selectedSizes, setSelectedSizes] = useState<Size[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeProductModal, setActiveProductModal] = useState<Product | null>(null);
+  const [modalSelectedSize, setModalSelectedSize] = useState<Size | null>(null);
+  const [siteOrigin, setSiteOrigin] = useState<string>('');
 
   const toggleSection = (key: FilterSectionKey) => {
     setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
-  // Sincronizar el filtro de marca desde el query param ?brand= al entrar desde el Home
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setSiteOrigin(window.location.origin);
+    }
+  }, []);
+
+  // Sincronizar el filtro de marca (?brand=) y apertura directa de producto (?product=)
   useEffect(() => {
     const brandParam = searchParams.get('brand');
     if (brandParam && BRANDS.includes(brandParam as Brand)) {
@@ -67,7 +75,37 @@ export default function ProductsCatalog() {
     } else if (!brandParam) {
       setSelectedBrands([]);
     }
+
+    const productParam = searchParams.get('product');
+    if (productParam) {
+      const found = PRODUCTS.find((p) => p.id === productParam);
+      if (found) {
+        setActiveProductModal(found);
+        setModalSelectedSize(found.sizes[0] ?? null);
+      }
+    }
   }, [searchParams]);
+
+  const openProductModal = (product: Product) => {
+    setActiveProductModal(product);
+    setModalSelectedSize(product.sizes[0] ?? null);
+  };
+
+  const buildProductWhatsAppUrl = (product: Product, chosenSize?: Size | null) => {
+    const origin =
+      siteOrigin || (typeof window !== 'undefined' ? window.location.origin : '');
+    const productUrl = `${origin}/productos?product=${encodeURIComponent(product.id)}`;
+    const imageUrl = `${origin}${encodeURI(product.image)}`;
+    const sizeLine = chosenSize ? `\n• Talla: ${chosenSize}` : '';
+    const message =
+      `Hola DRIP HOUSE 🖤, estoy interesado en este producto:\n` +
+      `• Producto: ${product.name} (${product.brand})\n` +
+      `• Referencia: ${product.id.toUpperCase()}${sizeLine}\n` +
+      `• Precio: ${formatCOP(product.price)}\n` +
+      `• Ver producto: ${productUrl}\n` +
+      `• Imagen: ${imageUrl}`;
+    return `https://wa.me/573017600570?text=${encodeURIComponent(message)}`;
+  };
 
   // Selección de marcas: si se elige "Todas", se limpian las marcas individuales.
   // Si se eligen marcas individuales, "Todas" queda desactivado automáticamente.
@@ -568,10 +606,6 @@ export default function ProductsCatalog() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredProducts.map((product) => {
-            const whatsappText = encodeURIComponent(
-              `Hola DRIP HOUSE 🖤, me interesa la pieza "${product.name}" (${product.brand} - ${product.category}) con precio ${formatCOP(product.price)}. ¿Está disponible?`
-            );
-
             return (
               <article
                 key={product.id}
@@ -580,7 +614,7 @@ export default function ProductsCatalog() {
                 <div>
                   {/* Imagen del Producto */}
                   <div
-                    onClick={() => setActiveProductModal(product)}
+                    onClick={() => openProductModal(product)}
                     className="relative aspect-square w-full overflow-hidden bg-zinc-950 cursor-pointer"
                   >
                     <img
@@ -625,7 +659,7 @@ export default function ProductsCatalog() {
                         REF: {product.id.toUpperCase()}
                       </p>
                       <h2
-                        onClick={() => setActiveProductModal(product)}
+                        onClick={() => openProductModal(product)}
                         className="text-sm font-bold text-zinc-100 group-hover:text-white line-clamp-2 mt-0.5 cursor-pointer"
                         title={product.name}
                       >
@@ -667,7 +701,7 @@ export default function ProductsCatalog() {
 
                   {product.inStock ? (
                     <a
-                      href={`https://wa.me/573017600570?text=${whatsappText}`}
+                      href={buildProductWhatsAppUrl(product)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white text-black hover:bg-zinc-200 text-[11px] font-bold uppercase tracking-wider transition"
@@ -726,6 +760,10 @@ export default function ProductsCatalog() {
                 </p>
                 <div className="text-xs text-zinc-400 space-y-1 pt-2 border-t border-zinc-800">
                   <p>
+                    <strong className="text-zinc-200">Referencia:</strong>{' '}
+                    {activeProductModal.id.toUpperCase()}
+                  </p>
+                  <p>
                     <strong className="text-zinc-200">Categoría:</strong>{' '}
                     {activeProductModal.category}
                   </p>
@@ -736,26 +774,33 @@ export default function ProductsCatalog() {
                 </div>
                 <div className="pt-2">
                   <p className="text-[11px] uppercase tracking-wider text-zinc-400 mb-2">
-                    Tallas disponibles:
+                    Selecciona tu talla:
                   </p>
-                  <div className="flex gap-2">
-                    {activeProductModal.sizes.map((sz) => (
-                      <span
-                        key={sz}
-                        className="px-3 py-1.5 rounded border border-zinc-700 bg-zinc-900 text-xs font-bold text-white"
-                      >
-                        {sz}
-                      </span>
-                    ))}
+                  <div className="flex flex-wrap gap-2">
+                    {activeProductModal.sizes.map((sz) => {
+                      const isPicked = modalSelectedSize === sz;
+                      return (
+                        <button
+                          key={sz}
+                          type="button"
+                          onClick={() => setModalSelectedSize(sz)}
+                          className={`px-3 py-1.5 rounded border text-xs font-bold transition ${
+                            isPicked
+                              ? 'bg-white text-black border-white shadow-[0_0_12px_rgba(255,255,255,0.2)]'
+                              : 'border-zinc-700 bg-zinc-900 text-white hover:border-zinc-400'
+                          }`}
+                        >
+                          {sz}
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
 
               <div className="space-y-2 pt-4 border-t border-zinc-800">
                 <a
-                  href={`https://wa.me/573017600570?text=${encodeURIComponent(
-                    `Hola DRIP HOUSE 🖤, quiero pedir "${activeProductModal.name}" (${activeProductModal.brand}) por ${formatCOP(activeProductModal.price)}.`
-                  )}`}
+                  href={buildProductWhatsAppUrl(activeProductModal, modalSelectedSize)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-white text-black font-bold text-xs uppercase tracking-widest hover:bg-zinc-200 transition"
