@@ -25,8 +25,7 @@ export default function HomePage() {
 
         <div className="relative -mt-28 sm:-mt-32 px-6 pb-8 sm:px-10 sm:pb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-3 max-w-2xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-700 bg-zinc-900/90 text-[11px] font-semibold uppercase tracking-[0.3em] text-zinc-300">
-              <Sparkles className="w-3.5 h-3.5 text-white" />
+            <span className="inline-flex items-center px-3 py-1 rounded-full border border-zinc-700 bg-zinc-900/90 text-[11px] font-semibold uppercase tracking-[0.3em] text-zinc-300">
               Luxury Streetwear Sanctuary
             </span>
             <h1 className="font-gothic text-5xl sm:text-6xl md:text-7xl text-white tracking-wide drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]">
