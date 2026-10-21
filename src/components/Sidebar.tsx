@@ -27,13 +27,8 @@ export default function Sidebar() {
         <Link
           href="/"
           onClick={() => setMobileOpen(false)}
-          className="flex items-center gap-3"
+          className="flex items-center"
         >
-          <img
-            src="/LOGO_2_(boton-ome).jpg"
-            alt="DRIP HOUSE Home"
-            className="h-10 w-10 object-cover rounded border border-zinc-700"
-          />
           <span className="font-gothic text-2xl tracking-wider text-white">
             Drip House
           </span>
