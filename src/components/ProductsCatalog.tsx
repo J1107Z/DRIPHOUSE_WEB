@@ -15,6 +15,8 @@ import {
   Ruler,
   ChevronDown,
   ChevronUp,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react';
 import {
   BRANDS,
@@ -30,6 +32,8 @@ import { PRODUCTS, formatCOP } from '@/data/products';
 type PriceSort = 'default' | 'asc' | 'desc';
 type StockFilter = 'all' | 'inStock' | 'outOfStock';
 type FilterSectionKey = 'marca' | 'categoria' | 'orden' | 'disponibilidad' | 'tallas';
+
+const ITEMS_PER_PAGE = 20;
 
 export default function ProductsCatalog() {
   const searchParams = useSearchParams();
@@ -56,6 +60,7 @@ export default function ProductsCatalog() {
   const [activeProductModal, setActiveProductModal] = useState<Product | null>(null);
   const [modalSelectedSize, setModalSelectedSize] = useState<Size | null>(null);
   const [siteOrigin, setSiteOrigin] = useState<string>('');
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   const toggleSection = (key: FilterSectionKey) => {
     setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -196,6 +201,34 @@ export default function ProductsCatalog() {
     selectedSizes,
     searchQuery,
   ]);
+
+  // Reiniciar a la página 1 cada vez que cambian los filtros o la búsqueda
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [
+    selectedBrands,
+    selectedCategory,
+    priceSort,
+    stockFilter,
+    selectedSizes,
+    searchQuery,
+  ]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / ITEMS_PER_PAGE));
+  const safePage = Math.min(currentPage, totalPages);
+  const startIndex = (safePage - 1) * ITEMS_PER_PAGE;
+  const paginatedProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
+
+  const handlePageChange = (page: number) => {
+    const target = Math.max(1, Math.min(page, totalPages));
+    setCurrentPage(target);
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const activeFiltersCount =
     (selectedBrands.length > 0 ? 1 : 0) +
@@ -604,120 +637,183 @@ export default function ProductsCatalog() {
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredProducts.map((product) => {
-            return (
-              <article
-                key={product.id}
-                className="group marble-card rounded-xl border border-zinc-800/90 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-zinc-400 hover:shadow-[0_12px_35px_rgba(255,255,255,0.07)]"
-              >
-                <div>
-                  {/* Imagen del Producto */}
-                  <div
-                    onClick={() => openProductModal(product)}
-                    className="relative aspect-square w-full overflow-hidden bg-zinc-950 cursor-pointer"
-                  >
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      loading="lazy"
-                      className={`h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105 ${
-                        !product.inStock ? 'opacity-50 grayscale' : ''
-                      }`}
-                    />
-
-                    {/* Badges superiores: Marca y Categoría */}
-                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 pointer-events-none">
-                      <span className="px-2.5 py-1 rounded bg-black/85 backdrop-blur-xs border border-zinc-700 text-[10px] font-bold uppercase tracking-widest text-white">
-                        {product.brand}
-                      </span>
-                      <span className="px-2.5 py-1 rounded bg-zinc-900/90 backdrop-blur-xs border border-zinc-800 text-[10px] font-medium uppercase tracking-wider text-zinc-300">
-                        {product.category}
-                      </span>
-                    </div>
-
-                    {/* Badge de Disponibilidad */}
-                    <div className="absolute bottom-3 left-3 pointer-events-none">
-                      {product.inStock ? (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-black/85 border border-zinc-600 text-[10px] font-semibold uppercase tracking-wider text-zinc-100">
-                          <CheckCircle2 className="w-3 h-3 text-white" />
-                          En existencia
-                        </span>
-                      ) : (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-zinc-950/95 border border-zinc-800 text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
-                          <XCircle className="w-3 h-3 text-zinc-500" />
-                          Agotado
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Información del Producto */}
-                  <div className="p-4 space-y-3">
-                    <div>
-                      <p className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">
-                        REF: {product.id.toUpperCase()}
-                      </p>
-                      <h2
-                        onClick={() => openProductModal(product)}
-                        className="text-sm font-bold text-zinc-100 group-hover:text-white line-clamp-2 mt-0.5 cursor-pointer"
-                        title={product.name}
-                      >
-                        {product.name}
-                      </h2>
-                    </div>
-
-                    {/* Tallas disponibles */}
-                    <div className="flex items-center flex-wrap gap-1">
-                      <span className="text-[10px] uppercase tracking-wider text-zinc-500 mr-1">
-                        Tallas:
-                      </span>
-                      {product.sizes.map((sz) => (
-                        <span
-                          key={sz}
-                          className={`px-1.5 py-0.5 rounded text-[10px] font-semibold border ${
-                            selectedSizes.includes(sz)
-                              ? 'bg-white text-black border-white'
-                              : 'bg-zinc-900/90 text-zinc-300 border-zinc-800'
-                          }`}
-                        >
-                          {sz}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Pie de Tarjeta: Precio y Acción */}
-                <div className="px-4 pb-4 pt-2 border-t border-zinc-900 flex items-center justify-between gap-2">
+        <div className="space-y-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {paginatedProducts.map((product) => {
+              return (
+                <article
+                  key={product.id}
+                  className="group marble-card rounded-xl border border-zinc-800/90 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-zinc-400 hover:shadow-[0_12px_35px_rgba(255,255,255,0.07)]"
+                >
                   <div>
-                    <span className="block text-[10px] uppercase tracking-widest text-zinc-500">
-                      Precio
-                    </span>
-                    <span className="text-base font-black tracking-tight text-white">
-                      {formatCOP(product.price)}
-                    </span>
+                    {/* Imagen del Producto */}
+                    <div
+                      onClick={() => openProductModal(product)}
+                      className="relative aspect-square w-full overflow-hidden bg-zinc-950 cursor-pointer"
+                    >
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        loading="lazy"
+                        className={`h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105 ${
+                          !product.inStock ? 'opacity-50 grayscale' : ''
+                        }`}
+                      />
+
+                      {/* Badges superiores: Marca y Categoría */}
+                      <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 pointer-events-none">
+                        <span className="px-2.5 py-1 rounded bg-black/85 backdrop-blur-xs border border-zinc-700 text-[10px] font-bold uppercase tracking-widest text-white">
+                          {product.brand}
+                        </span>
+                        <span className="px-2.5 py-1 rounded bg-zinc-900/90 backdrop-blur-xs border border-zinc-800 text-[10px] font-medium uppercase tracking-wider text-zinc-300">
+                          {product.category}
+                        </span>
+                      </div>
+
+                      {/* Badge de Disponibilidad */}
+                      <div className="absolute bottom-3 left-3 pointer-events-none">
+                        {product.inStock ? (
+                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-black/85 border border-zinc-600 text-[10px] font-semibold uppercase tracking-wider text-zinc-100">
+                            <CheckCircle2 className="w-3 h-3 text-white" />
+                            En existencia
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-zinc-950/95 border border-zinc-800 text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
+                            <XCircle className="w-3 h-3 text-zinc-500" />
+                            Agotado
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Información del Producto */}
+                    <div className="p-4 space-y-3">
+                      <div>
+                        <p className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">
+                          REF: {product.id.toUpperCase()}
+                        </p>
+                        <h2
+                          onClick={() => openProductModal(product)}
+                          className="text-sm font-bold text-zinc-100 group-hover:text-white line-clamp-2 mt-0.5 cursor-pointer"
+                          title={product.name}
+                        >
+                          {product.name}
+                        </h2>
+                      </div>
+
+                      {/* Tallas disponibles */}
+                      <div className="flex items-center flex-wrap gap-1">
+                        <span className="text-[10px] uppercase tracking-wider text-zinc-500 mr-1">
+                          Tallas:
+                        </span>
+                        {product.sizes.map((sz) => (
+                          <span
+                            key={sz}
+                            className={`px-1.5 py-0.5 rounded text-[10px] font-semibold border ${
+                              selectedSizes.includes(sz)
+                                ? 'bg-white text-black border-white'
+                                : 'bg-zinc-900/90 text-zinc-300 border-zinc-800'
+                            }`}
+                          >
+                            {sz}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
 
-                  {product.inStock ? (
-                    <a
-                      href={buildProductWhatsAppUrl(product)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white text-black hover:bg-zinc-200 text-[11px] font-bold uppercase tracking-wider transition"
+                  {/* Pie de Tarjeta: Precio y Acción */}
+                  <div className="px-4 pb-4 pt-2 border-t border-zinc-900 flex items-center justify-between gap-2">
+                    <div>
+                      <span className="block text-[10px] uppercase tracking-widest text-zinc-500">
+                        Precio
+                      </span>
+                      <span className="text-base font-black tracking-tight text-white">
+                        {formatCOP(product.price)}
+                      </span>
+                    </div>
+
+                    {product.inStock ? (
+                      <a
+                        href={buildProductWhatsAppUrl(product)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white text-black hover:bg-zinc-200 text-[11px] font-bold uppercase tracking-wider transition"
+                      >
+                        <MessageCircle className="w-3.5 h-3.5" />
+                        <span>Comprar</span>
+                      </a>
+                    ) : (
+                      <span className="px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-800 text-[11px] font-semibold uppercase tracking-wider text-zinc-500 cursor-not-allowed">
+                        Sin Stock
+                      </span>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          {/* Controles de Paginación inferiores (máximo 20 productos por página) */}
+          {totalPages > 1 && (
+            <nav
+              aria-label="Paginación de productos"
+              className="marble-card rounded-2xl border border-zinc-800/90 px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-4"
+            >
+              <p className="text-xs text-zinc-400">
+                Mostrando{' '}
+                <strong className="text-white">{startIndex + 1}</strong>
+                &ndash;
+                <strong className="text-white">
+                  {Math.min(startIndex + ITEMS_PER_PAGE, filteredProducts.length)}
+                </strong>{' '}
+                de <strong className="text-white">{filteredProducts.length}</strong>{' '}
+                productos &bull; Página <strong className="text-white">{safePage}</strong> de{' '}
+                {totalPages}
+              </p>
+
+              <div className="flex flex-wrap items-center justify-center gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => handlePageChange(safePage - 1)}
+                  disabled={safePage === 1}
+                  className="inline-flex items-center gap-1 px-3 py-2 rounded-lg border border-zinc-800 bg-zinc-950 text-xs font-bold uppercase tracking-wider text-zinc-300 hover:border-zinc-500 hover:text-white disabled:opacity-40 disabled:pointer-events-none transition"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                  <span>Anterior</span>
+                </button>
+
+                {Array.from({ length: totalPages }, (_, idx) => idx + 1).map((page) => {
+                  const isActive = page === safePage;
+                  return (
+                    <button
+                      key={page}
+                      type="button"
+                      onClick={() => handlePageChange(page)}
+                      aria-current={isActive ? 'page' : undefined}
+                      className={`min-w-9 h-9 px-2.5 rounded-lg border text-xs font-black transition ${
+                        isActive
+                          ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                          : 'bg-zinc-950 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
+                      }`}
                     >
-                      <MessageCircle className="w-3.5 h-3.5" />
-                      <span>Comprar</span>
-                    </a>
-                  ) : (
-                    <span className="px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-800 text-[11px] font-semibold uppercase tracking-wider text-zinc-500 cursor-not-allowed">
-                      Sin Stock
-                    </span>
-                  )}
-                </div>
-              </article>
-            );
-          })}
+                      {page}
+                    </button>
+                  );
+                })}
+
+                <button
+                  type="button"
+                  onClick={() => handlePageChange(safePage + 1)}
+                  disabled={safePage === totalPages}
+                  className="inline-flex items-center gap-1 px-3 py-2 rounded-lg border border-zinc-800 bg-zinc-950 text-xs font-bold uppercase tracking-wider text-zinc-300 hover:border-zinc-500 hover:text-white disabled:opacity-40 disabled:pointer-events-none transition"
+                >
+                  <span>Siguiente</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            </nav>
+          )}
         </div>
       )}
 
