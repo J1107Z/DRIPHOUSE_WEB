@@ -1,0 +1,2696 @@
+[
+  {
+    "id": "dh-001",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/01-1302661.webp",
+    "name": "Godspeed Heavyweight Wash Hoodie #01",
+    "brand": "Godspeed",
+    "category": "Hoodie",
+    "price": 420000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-002",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/2278ACD8-150C-4F1D-B247-167954A98EBA.webp",
+    "name": "Godspeed Limited Graphic Tee #02",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 295000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-003",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/3_1_d23ea179-6dd0-4310-a9a8-574572ffd56a.webp",
+    "name": "Godspeed Limited Graphic Tee #03",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 310000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-004",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/417.webp",
+    "name": "Godspeed Limited Graphic Tee #04",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 325000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-005",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/C5FE7E49-02C3-47C0-A8BC-CE8210EE2F99.webp",
+    "name": "Godspeed Heavyweight Wash Hoodie #05",
+    "brand": "Godspeed",
+    "category": "Hoodie",
+    "price": 420000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-006",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/ChatGPTImageJul19_2026_10_30_22AM.webp",
+    "name": "Godspeed Limited Graphic Tee #06",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 280000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-007",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/E6D24DBD-F3C3-447B-BF2B-66851F3411C7.webp",
+    "name": "Godspeed Limited Graphic Tee #07",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 295000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-008",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/EA4F2475-C7A1-49AA-ADC1-FE27CC63C6BF.webp",
+    "name": "Godspeed Limited Graphic Tee #08",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 310000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-009",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/godspeed-x-the-legacy-trucker-black-red-denim-lox-rr-track-men-rr-track-pricepointmix-spo-default-new-york-418.webp",
+    "name": "Godspeed Legacy Trucker Cap #09",
+    "brand": "Godspeed",
+    "category": "Gorras",
+    "price": 220000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-010",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/GS2677_-1_1_69668e74-b0a9-40ad-b4a3-d749e3350fdf.webp",
+    "name": "Godspeed Limited Graphic Tee #10",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 340000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-011",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/GS3005_-1_2.webp",
+    "name": "Godspeed Limited Graphic Tee #11",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 280000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-012",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/GS3105_-1.webp",
+    "name": "Godspeed Limited Graphic Tee #12",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 295000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-013",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/GS3140_-1_23635328-55e7-4cad-9860-781f4e751f3a.webp",
+    "name": "Godspeed Heavyweight Wash Hoodie #13",
+    "brand": "Godspeed",
+    "category": "Hoodie",
+    "price": 420000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-014",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/GS3167-_-_-1_31d69780-94ff-44ee-a0d1-df18a4323094.webp",
+    "name": "Godspeed Limited Graphic Tee #14",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 325000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-015",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GODSPEED/IMG_0896.webp",
+    "name": "Godspeed Limited Graphic Tee #15",
+    "brand": "Godspeed",
+    "category": "Camisas",
+    "price": 340000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-016",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BPRO%2BCAP%2BS%2BFB%2BJUMPMAN%20(1).webp",
+    "name": "Jumpman Pro Snapback Cap Ed. 1",
+    "brand": "Nike",
+    "category": "Gorras",
+    "price": 165000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-017",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BPRO%2BCAP%2BS%2BFB%2BJUMPMAN%20(2).webp",
+    "name": "Jumpman Pro Snapback Cap Ed. 2",
+    "brand": "Jordan",
+    "category": "Gorras",
+    "price": 175000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-018",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BPRO%2BCAP%2BS%2BFB%2BJUMPMAN%20(3).webp",
+    "name": "Jumpman Pro Snapback Cap Ed. 3",
+    "brand": "Jordan",
+    "category": "Gorras",
+    "price": 185000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-019",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BPRO%2BCAP%2BS%2BFB%2BJUMPMAN%20(4).webp",
+    "name": "Jumpman Pro Snapback Cap Ed. 4",
+    "brand": "Nike",
+    "category": "Gorras",
+    "price": 195000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-020",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BPRO%2BCAP%2BS%2BFB%2BJUMPMAN%20(5).webp",
+    "name": "Jumpman Pro Snapback Cap Ed. 5",
+    "brand": "Jordan",
+    "category": "Gorras",
+    "price": 165000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-021",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BPRO%2BCAP%2BS%2BFB%2BJUMPMAN.webp",
+    "name": "Jumpman Pro Snapback Cap Ed. 6",
+    "brand": "Jordan",
+    "category": "Gorras",
+    "price": 175000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-022",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BPRO%2BCAP%2BS%2BFB%2BLSR.webp",
+    "name": "Jumpman Pro Snapback Cap Ed. 7",
+    "brand": "Nike",
+    "category": "Gorras",
+    "price": 185000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-023",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BPRO%2BCAP%2BUS%2BFB%2B5%2BPNL%2BBRK%20(1).webp",
+    "name": "Pro 5-Panel Camp Cap Ed. 8",
+    "brand": "Jordan",
+    "category": "Gorras",
+    "price": 195000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-024",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BPRO%2BCAP%2BUS%2BFB%2B5%2BPNL%2BBRK.webp",
+    "name": "Pro 5-Panel Camp Cap Ed. 9",
+    "brand": "Jordan",
+    "category": "Gorras",
+    "price": 165000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-025",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BRISE%2BCAP%2BS%2BCB%2BTRKR%2BJM%2BPTCH%20(1).webp",
+    "name": "Jordan Rise Trucker Patch Cap Ed. 10",
+    "brand": "Nike",
+    "category": "Gorras",
+    "price": 175000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-026",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BRISE%2BCAP%2BS%2BCB%2BTRKR%2BJM%2BPTCH%20(2).webp",
+    "name": "Jordan Rise Trucker Patch Cap Ed. 11",
+    "brand": "Jordan",
+    "category": "Gorras",
+    "price": 185000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-027",
+    "image": "/DRIP%20HOUSE%20CATALOGO/GORRAS%20JORDAN-NIKE/U%2BJ%2BRISE%2BCAP%2BS%2BCB%2BTRKR%2BJM%2BPTCH%20(3).webp",
+    "name": "Jordan Rise Trucker Patch Cap Ed. 12",
+    "brand": "Jordan",
+    "category": "Gorras",
+    "price": 195000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-028",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20FV8606-050%201.webp",
+    "name": "Jordan Flight Fleece Hoodie (FV8606-050 1)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 380000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-029",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20FV8606-050.webp",
+    "name": "Jordan Statement Graphic Tee (FV8606-050)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 225000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-030",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20IF1913-010%20.webp",
+    "name": "Jordan Statement Graphic Tee (IF1913-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 240000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-031",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20IF3898-417.webp",
+    "name": "Jordan Flight Fleece Hoodie (IF3898-417)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 440000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-032",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20IM8998-010.webp",
+    "name": "Jordan Statement Graphic Tee (IM8998-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 270000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-033",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20IM8998-0101.webp",
+    "name": "Jordan Statement Graphic Tee (IM8998-0101)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 210000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-034",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20IO0113-100.webp",
+    "name": "Jordan Flight Fleece Hoodie (IO0113-100)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 420000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-035",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20IO0113-1002.webp",
+    "name": "Jordan Statement Graphic Tee (IO0113-1002)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 240000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-036",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20IQ1024-045.webp",
+    "name": "Jordan Statement Graphic Tee (IQ1024-045)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 255000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-037",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20IQ1397-010.webp",
+    "name": "Jordan Flight Fleece Hoodie (IQ1397-010)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 400000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-038",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20IQ2151-010.webp",
+    "name": "Jordan Statement Graphic Tee (IQ2151-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 210000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-039",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/%20IU0249-378.webp",
+    "name": "Jordan Statement Graphic Tee (IU0249-378)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 225000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-040",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/FQ4332-010.webp",
+    "name": "Jordan Flight Fleece Hoodie (FQ4332-010)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 380000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-041",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/FQ4332-063.webp",
+    "name": "Jordan Statement Graphic Tee (FQ4332-063)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 255000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-042",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/HQ8694-010.webp",
+    "name": "Jordan Statement Graphic Tee (HQ8694-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 270000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-043",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/HV0091-010.webp",
+    "name": "Jordan Flight Fleece Hoodie (HV0091-010)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 440000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-044",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/HV0093-051.webp",
+    "name": "Jordan Statement Graphic Tee (HV0093-051)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 225000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-045",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IB1047-010.webp",
+    "name": "Jordan Statement Graphic Tee (IB1047-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 240000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-046",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IM7629-010.webp",
+    "name": "Jordan Flight Fleece Hoodie (IM7629-010)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 420000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-047",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IM7629-100.webp",
+    "name": "Jordan Statement Graphic Tee (IM7629-100)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 270000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-048",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IM7629-657.webp",
+    "name": "Jordan Statement Graphic Tee (IM7629-657)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 210000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-049",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IM7774-010.webp",
+    "name": "Jordan Flight Fleece Hoodie (IM7774-010)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 400000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-050",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IM7774-100.webp",
+    "name": "Jordan Statement Graphic Tee (IM7774-100)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 240000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-051",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IM9873-010.webp",
+    "name": "Jordan Statement Graphic Tee (IM9873-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 255000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-052",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IQ0844-010.webp",
+    "name": "Jordan Flight Fleece Hoodie (IQ0844-010)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 380000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-053",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IQ0844-687.webp",
+    "name": "Jordan Statement Graphic Tee (IQ0844-687)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 210000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-054",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IQ5295-010.webp",
+    "name": "Jordan Statement Graphic Tee (IQ5295-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 225000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-055",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IQ5295-100.webp",
+    "name": "Jordan Flight Fleece Hoodie (IQ5295-100)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 440000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-056",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IU7876-010.webp",
+    "name": "Jordan Statement Graphic Tee (IU7876-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 255000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-057",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IZ3178-010.webp",
+    "name": "Jordan Statement Graphic Tee (IZ3178-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 270000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-058",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/IZ3178-100.webp",
+    "name": "Jordan Flight Fleece Hoodie (IZ3178-100)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 420000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-059",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/JF5969-010.webp",
+    "name": "Jordan Statement Graphic Tee (JF5969-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 225000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-060",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/JK1695-010.webp",
+    "name": "Jordan Statement Graphic Tee (JK1695-010)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 240000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-061",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/M%2BJ%2BBRK%2BFC%2BFLC%2BPO%2BLB.webp",
+    "name": "Jordan Flight Fleece Hoodie (M J BRK FC FLC PO LB)",
+    "brand": "Jordan",
+    "category": "Hoodie",
+    "price": 400000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-062",
+    "image": "/DRIP%20HOUSE%20CATALOGO/JORDAN/M%2BJ%2BDF%2BSPT%2BSTMT%2BGFX%2BSS%2BCREW.webp",
+    "name": "Jordan Statement Graphic Tee (M J DF SPT STMT GFX SS CREW)",
+    "brand": "Jordan",
+    "category": "Camisas",
+    "price": 270000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-063",
+    "image": "/DRIP%20HOUSE%20CATALOGO/LIFE%20HUSTLER_S/007D4B17-06F4-4DFA-8E8C-5D8EB07FF4A2.webp",
+    "name": "Life Hustlers Club Rhinestone Cap #1",
+    "brand": "Life Hustlers",
+    "category": "Gorras",
+    "price": 210000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-064",
+    "image": "/DRIP%20HOUSE%20CATALOGO/LIFE%20HUSTLER_S/2A46F036-8D93-46C2-AB1B-AF70D53CFD4C.webp",
+    "name": "Life Hustlers Club Rhinestone Cap #2",
+    "brand": "Life Hustlers",
+    "category": "Gorras",
+    "price": 220000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-065",
+    "image": "/DRIP%20HOUSE%20CATALOGO/LIFE%20HUSTLER_S/C1A2CD38-3E64-4102-A440-68750E6D3489.webp",
+    "name": "Life Hustlers Club Rhinestone Cap #3",
+    "brand": "Life Hustlers",
+    "category": "Gorras",
+    "price": 230000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-066",
+    "image": "/DRIP%20HOUSE%20CATALOGO/LIFE%20HUSTLER_S/EC00CDD6-AE35-4F75-A685-6297DF441196.webp",
+    "name": "Life Hustlers Street Luxury Tee #4",
+    "brand": "Life Hustlers",
+    "category": "Camisas",
+    "price": 260000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-067",
+    "image": "/DRIP%20HOUSE%20CATALOGO/LIFE%20HUSTLER_S/GORRA%20LIFE%20HUSTLERS%20(negra%20y%20blanca).webp",
+    "name": "Life Hustlers Club Rhinestone Cap #5",
+    "brand": "Life Hustlers",
+    "category": "Gorras",
+    "price": 250000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-068",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/04D73481-A0A9-4D52-A32E-12AEA5362849.webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #01",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 410000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-069",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/088507A8-D4C8-495B-B614-81EFC45B50C2.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #02",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 287000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-070",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/1_0001_IMG_3516%20(1).webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #03",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 299000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-071",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/1_0003_IMG_3512_8440b1d8-1c0f-4eb1-8884-ffeb3aca5c2a.webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #04",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 455000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-072",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/23791267-DA15-4E7C-812E-7DBF6BC8CB43.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #05",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 323000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-073",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/501492F0-28BB-4BF2-9AC3-445BE95A9DAD.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #06",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 275000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-074",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/562AC063-6CB3-47F8-A7EE-2103281F2BAB.webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #07",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 440000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-075",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/57F0D4B8-00AE-4230-A600-F07D05875442.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #08",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 299000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-076",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/7400734C-259C-49A8-AF6C-53E3F050970C.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #09",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 311000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-077",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/781180B1-7F88-4ADF-B20F-C7A9B1199A76.webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #10",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 425000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-078",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/843A1723-298C-48E8-8F6A-40E79487F729.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #11",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 275000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-079",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/9990FC5E-9B1C-48AB-B6F9-E1990DD8ED85.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #12",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 287000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-080",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/april_0003_IMG_2408.webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #13",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 410000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-081",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/EDDD29F4-2259-4EB4-9C99-22300161E7AC.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #14",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 311000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-082",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-0748.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #15",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 323000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-083",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-0750.webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #16",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 455000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-084",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-0752.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #17",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 287000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-085",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-1269.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #18",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 299000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-086",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-3967.webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #19",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 440000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-087",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-4399.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #20",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 323000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-088",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-4417.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #21",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 275000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-089",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-4418.webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #22",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 425000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-090",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-4419.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #23",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 299000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-091",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-5034.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #24",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 311000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-092",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-5041.webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #25",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 410000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-093",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-5043.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #26",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 275000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-094",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-5047.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #27",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 287000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-095",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-5256%20(1).webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #28",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 455000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-096",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-5442.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #29",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 311000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-097",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-5445.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #30",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 323000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-098",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-5447%20(1).webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #31",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 440000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-099",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-8051.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #32",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 287000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-100",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-8052.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #33",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 299000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-101",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/IMG-8569.webp",
+    "name": "Mixed Emotion Distressed Zip Hoodie #34",
+    "brand": "Mixed Emotion",
+    "category": "Hoodie",
+    "price": 425000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-102",
+    "image": "/DRIP%20HOUSE%20CATALOGO/MIXED%20EMOTION/pnkffrontt.webp",
+    "name": "Mixed Emotion Rhinestone Oversized Tee #35",
+    "brand": "Mixed Emotion",
+    "category": "Camisas",
+    "price": 323000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-103",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/%20IQ1009-016%202.webp",
+    "name": "Nike Sportswear Club Fleece Hoodie (IQ1009-016 2)",
+    "brand": "Nike",
+    "category": "Hoodie",
+    "price": 350000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-104",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/%20IQ1009-016.webp",
+    "name": "Nike Premium Heavyweight Tee (IQ1009-016)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 205000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-105",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/FN3864-010.webp",
+    "name": "Nike Premium Heavyweight Tee (FN3864-010)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 215000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-106",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/FN3864-451.webp",
+    "name": "Nike Premium Heavyweight Tee (FN3864-451)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 225000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-107",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/FQ4330-010.webp",
+    "name": "Nike Sportswear Club Fleece Hoodie (FQ4330-010)",
+    "brand": "Nike",
+    "category": "Hoodie",
+    "price": 350000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-108",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/FQ4332-010.webp",
+    "name": "Nike Premium Heavyweight Tee (FQ4332-010)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 195000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-109",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/FQ4332-063.webp",
+    "name": "Nike Premium Heavyweight Tee (FQ4332-063)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 205000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-110",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/HQ8694-010.webp",
+    "name": "Nike Premium Heavyweight Tee (HQ8694-010)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 215000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-111",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/HV8369-010.webp",
+    "name": "Nike Sportswear Club Fleece Hoodie (HV8369-010)",
+    "brand": "Nike",
+    "category": "Hoodie",
+    "price": 350000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-112",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/HV8369-476.webp",
+    "name": "Nike Premium Heavyweight Tee (HV8369-476)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 235000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-113",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/HV8369-613.webp",
+    "name": "Nike Premium Heavyweight Tee (HV8369-613)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 195000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-114",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/HV8371-013.webp",
+    "name": "Nike Premium Heavyweight Tee (HV8371-013)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 205000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-115",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IF0721-010.webp",
+    "name": "Nike Sportswear Club Fleece Hoodie (IF0721-010)",
+    "brand": "Nike",
+    "category": "Hoodie",
+    "price": 350000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-116",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IF0721-476.webp",
+    "name": "Nike Premium Heavyweight Tee (IF0721-476)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 225000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-117",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IF1266-010.webp",
+    "name": "Nike Premium Heavyweight Tee (IF1266-010)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 235000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-118",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IF1266-072.webp",
+    "name": "Nike Premium Heavyweight Tee (IF1266-072)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 195000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-119",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IF1288-072.webp",
+    "name": "Nike Sportswear Club Fleece Hoodie (IF1288-072)",
+    "brand": "Nike",
+    "category": "Hoodie",
+    "price": 350000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-120",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IF1306-072.webp",
+    "name": "Nike Premium Heavyweight Tee (IF1306-072)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 215000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-121",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IH1153-010.webp",
+    "name": "Nike Premium Heavyweight Tee (IH1153-010)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 225000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-122",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IM6042-084.webp",
+    "name": "Nike Premium Heavyweight Tee (IM6042-084)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 235000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-123",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IR3351-010.webp",
+    "name": "Nike Sportswear Club Fleece Hoodie (IR3351-010)",
+    "brand": "Nike",
+    "category": "Hoodie",
+    "price": 350000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-124",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IR3353-032.webp",
+    "name": "Nike Premium Heavyweight Tee (IR3353-032)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 205000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-125",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IX1928-220.webp",
+    "name": "Nike Premium Heavyweight Tee (IX1928-220)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 215000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-126",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/IX1928-410.webp",
+    "name": "Nike Premium Heavyweight Tee (IX1928-410)",
+    "brand": "Nike",
+    "category": "Camisas",
+    "price": 225000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-127",
+    "image": "/DRIP%20HOUSE%20CATALOGO/NIKE_/JF6187-010%20(1).webp",
+    "name": "Nike Sportswear Club Fleece Hoodie (JF6187-010 (1))",
+    "brand": "Nike",
+    "category": "Hoodie",
+    "price": 350000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-128",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/114AD015-919E-4A4F-8503-31B416CC97B5.webp",
+    "name": "Prestige Star Studded Full-Zip Hoodie #01",
+    "brand": "Prestige",
+    "category": "Hoodie",
+    "price": 430000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-129",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/4b6b9b18-56ab-4202-b429-28c5cc619a77.webp",
+    "name": "Prestige Gothic Graphic Oversized Tee #02",
+    "brand": "Prestige",
+    "category": "Camisas",
+    "price": 300000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-130",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/4_f9b18c21-bd67-4b5e-8bc4-8c469a43237e.webp",
+    "name": "Prestige Star Studded Full-Zip Hoodie #03",
+    "brand": "Prestige",
+    "category": "Hoodie",
+    "price": 460000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-131",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/5c6b96f2-c2aa-4407-aae3-6a6c5171c3d6.webp",
+    "name": "Prestige Gothic Graphic Oversized Tee #04",
+    "brand": "Prestige",
+    "category": "Camisas",
+    "price": 320000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-132",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/6719AA1E-1F68-4A09-BE15-8AEACD75C89E.webp",
+    "name": "Prestige Star Studded Full-Zip Hoodie #05",
+    "brand": "Prestige",
+    "category": "Hoodie",
+    "price": 430000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-133",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/81C0FE11-71E9-4118-B720-DB823516A1AF.webp",
+    "name": "Prestige Gothic Graphic Oversized Tee #06",
+    "brand": "Prestige",
+    "category": "Camisas",
+    "price": 300000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-134",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/8c875781-2419-4f82-b98d-e90325843e3e.webp",
+    "name": "Prestige Star Studded Full-Zip Hoodie #07",
+    "brand": "Prestige",
+    "category": "Hoodie",
+    "price": 460000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-135",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/aee2d420-9c7a-49c8-9eb8-29a17c7a6de9.webp",
+    "name": "Prestige Gothic Graphic Oversized Tee #08",
+    "brand": "Prestige",
+    "category": "Camisas",
+    "price": 320000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-136",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/b87966b1-90a1-44e6-9d02-a9a0ca09920c%20(1).webp",
+    "name": "Prestige Star Studded Full-Zip Hoodie #09",
+    "brand": "Prestige",
+    "category": "Hoodie",
+    "price": 430000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-137",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/IMG-1682.webp",
+    "name": "Prestige Gothic Graphic Oversized Tee #10",
+    "brand": "Prestige",
+    "category": "Camisas",
+    "price": 300000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-138",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/IMG-3366.webp",
+    "name": "Prestige Star Studded Full-Zip Hoodie #11",
+    "brand": "Prestige",
+    "category": "Hoodie",
+    "price": 460000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-139",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/IMG_6539.webp",
+    "name": "Prestige Gothic Graphic Oversized Tee #12",
+    "brand": "Prestige",
+    "category": "Camisas",
+    "price": 320000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-140",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/Photoroom_20260331_110424.webp",
+    "name": "Prestige Star Studded Full-Zip Hoodie #13",
+    "brand": "Prestige",
+    "category": "Hoodie",
+    "price": 430000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-141",
+    "image": "/DRIP%20HOUSE%20CATALOGO/PRESTIGE/PLOGO_PINK.webp",
+    "name": "Prestige Star Studded Full-Zip Hoodie #14",
+    "brand": "Prestige",
+    "category": "Hoodie",
+    "price": 445000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-142",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/604133-050.webp",
+    "name": "Sneakers Vault: 604133-050",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 580000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-143",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/AIR%2BFORCE%2B1%2B_07%20(1).webp",
+    "name": "Sneakers Vault: AIR FORCE 1 '07 (1)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 625000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-144",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/AIR%2BFORCE%2B1%2B_07%20(2).webp",
+    "name": "Sneakers Vault: AIR FORCE 1 '07 (2)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 670000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-145",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/AIR%2BFORCE%2B1%2B_07%20(3).webp",
+    "name": "Sneakers Vault: AIR FORCE 1 '07 (3)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 715000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-146",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/AIR%2BJORDAN%2B1%2BMID%20(1).webp",
+    "name": "Sneakers Vault: AIR JORDAN 1 MID (1)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 760000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-147",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/AIR%2BJORDAN%2B1%2BMID%20(2).webp",
+    "name": "Sneakers Vault: AIR JORDAN 1 MID (2)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 805000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-148",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/AIR%2BJORDAN%2B1%2BMID%20(3).webp",
+    "name": "Sneakers Vault: AIR JORDAN 1 MID (3)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 580000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-149",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/AIR%2BJORDAN%2B1%2BMID.webp",
+    "name": "Sneakers Vault: AIR JORDAN 1 MID",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 625000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-150",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/AIR%2BMAX%2B90%20(1).webp",
+    "name": "Sneakers Vault: AIR MAX 90 (1)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 670000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-151",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/AIR%2BMAX%2B90.webp",
+    "name": "Sneakers Vault: AIR MAX 90",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 715000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-152",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/JORDAN%2BFRANCHISE%2BSLIDE.webp",
+    "name": "Sneakers Vault: JORDAN FRANCHISE SLIDE",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 760000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-153",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/NIKE%2BAIR%2BMAX%2B90%2BPRM%2BTREBLE.webp",
+    "name": "Sneakers Vault: NIKE AIR MAX 90 PRM TREBLE",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 805000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-154",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/NIKE%2BAIR%2BMAX%2B90.webp",
+    "name": "Sneakers Vault: NIKE AIR MAX 90",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 580000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-155",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/NIKE%2BAIR%2BMAX%2B95%2BBB%2BQS.webp",
+    "name": "Sneakers Vault: NIKE AIR MAX 95 BB QS",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 625000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-156",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/NIKE%2BAIR%2BMAX%2B95%2BBIG%2BBUBBLE%20(1).webp",
+    "name": "Sneakers Vault: NIKE AIR MAX 95 BIG BUBBLE (1)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 670000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-157",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/NIKE%2BAIR%2BMAX%2B95%2BBIG%2BBUBBLE.webp",
+    "name": "Sneakers Vault: NIKE AIR MAX 95 BIG BUBBLE",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 715000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-158",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/NIKE%2BAIR%2BMAX%2BPLUS%2BOG%2BPRM%2B1.webp",
+    "name": "Sneakers Vault: NIKE AIR MAX PLUS OG PRM 1",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 760000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-159",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/NIKE%2BAIR%2BMAX%2BPLUS.webp",
+    "name": "Sneakers Vault: NIKE AIR MAX PLUS",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 805000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-160",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/W%2BNIKE%2BAIR%2BMAX%2B95%2BBIG%2BBUBBLE%20(1).webp",
+    "name": "Sneakers Vault: W NIKE AIR MAX 95 BIG BUBBLE (1)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 580000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-161",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/W%2BNIKE%2BAIR%2BMAX%2B95%2BBIG%2BBUBBLE%20(2).webp",
+    "name": "Sneakers Vault: W NIKE AIR MAX 95 BIG BUBBLE (2)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 625000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-162",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/W%2BNIKE%2BAIR%2BMAX%2B95%2BBIG%2BBUBBLE%20(3).webp",
+    "name": "Sneakers Vault: W NIKE AIR MAX 95 BIG BUBBLE (3)",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 670000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-163",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SNEAKERS/W%2BNIKE%2BAIR%2BMAX%2B95%2BBIG%2BBUBBLE.webp",
+    "name": "Sneakers Vault: W NIKE AIR MAX 95 BIG BUBBLE",
+    "brand": "Sneakers",
+    "category": "Zapatos",
+    "price": 715000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-164",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B8422_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B8422 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 460000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-165",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B8486_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B8486 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 485000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-166",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B8498_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B8498 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 510000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-167",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B8552_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B8552 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 535000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-168",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B8553_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B8553 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 560000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-169",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B8610_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B8610 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 460000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-170",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B8702_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B8702 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 485000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-171",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B8793_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B8793 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 510000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-172",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B9284_1_REVMattBlack.webp",
+    "name": "Sprayground Shark Limited Backpack (B9284 1 REVMattBlack)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 535000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-173",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B9319_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B9319 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 560000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-174",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B9325_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B9325 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 460000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-175",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B9450_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B9450 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 485000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "dh-176",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B9451_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B9451 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 510000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-177",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B9518_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B9518 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 535000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-178",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B9548_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B9548 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 560000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-179",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B9575_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B9575 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 460000,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-180",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/B9634_1.webp",
+    "name": "Sprayground Shark Limited Backpack (B9634 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 485000,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-181",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/D9306_1.webp",
+    "name": "Sprayground Shark Limited Backpack (D9306 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 510000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "dh-182",
+    "image": "/DRIP%20HOUSE%20CATALOGO/SPRAYGROUD/D9369_1.webp",
+    "name": "Sprayground Shark Limited Backpack (D9369 1)",
+    "brand": "Sprayground",
+    "category": "Bolso",
+    "price": 535000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "inStock": false
+  }
+]
