@@ -161,7 +161,7 @@ export default function ContactoPage() {
                     Línea Principal
                   </span>
                   <span className="block text-[11px] font-medium text-zinc-700 mt-0.5">
-                    Ventas directas, tallas y envíos &bull; +57 301 760 0570
+                    +57 301 760 0570
                   </span>
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function ContactoPage() {
                     Línea 2
                   </span>
                   <span className="block text-[11px] text-zinc-400 mt-0.5">
-                    Atención secundaria y soporte VIP &bull; +57 300 317 3419
+                    +57 300 317 3419
                   </span>
                 </div>
               </div>
