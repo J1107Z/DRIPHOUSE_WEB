@@ -23,7 +23,16 @@ export default function Sidebar() {
   return (
     <>
       {/* Barra superior móvil */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 h-16 bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800/80 px-4 flex items-center justify-between">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 h-16 bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800/80 px-4 flex items-center gap-3">
+        <button
+          type="button"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="p-2 rounded-md border border-zinc-800 bg-zinc-900/80 text-zinc-200 hover:text-white hover:border-zinc-600 transition"
+          aria-label="Abrir menú de navegación"
+        >
+          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+
         <Link
           href="/"
           onClick={() => setMobileOpen(false)}
@@ -33,15 +42,6 @@ export default function Sidebar() {
             Drip House
           </span>
         </Link>
-
-        <button
-          type="button"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="p-2 rounded-md border border-zinc-800 bg-zinc-900/80 text-zinc-200 hover:text-white hover:border-zinc-600 transition"
-          aria-label="Abrir menú de navegación"
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
       </div>
 
       {/* Overlay móvil */}
