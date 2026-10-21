@@ -65,8 +65,30 @@ export default function Sidebar() {
         }`}
       >
         <div className={isExpanded ? 'p-6 space-y-7' : 'p-3 py-6 space-y-6'}>
-          {/* 1. Botón Home con ./LOGO_2_(boton-ome).jpg */}
-          <div className="flex flex-col items-center border-b border-zinc-800/80 pb-6">
+          {/* Encabezado Móvil dentro del Sidebar: Botón X + Texto Drip House */}
+          <div className="flex lg:hidden items-center gap-3 border-b border-zinc-800/80 pb-5">
+            <button
+              type="button"
+              onClick={() => setMobileOpen(false)}
+              className="p-2 rounded-md border border-zinc-800 bg-zinc-900/80 text-zinc-200 hover:text-white hover:border-zinc-600 transition"
+              aria-label="Cerrar menú de navegación"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <Link
+              href="/"
+              onClick={() => setMobileOpen(false)}
+              className="flex items-center"
+            >
+              <span className="font-gothic text-2xl tracking-wider text-white">
+                Drip House
+              </span>
+            </Link>
+          </div>
+
+          {/* 1. Botón Home con ./LOGO_2_(boton-ome).jpg (Solo Escritorio) */}
+          <div className="hidden lg:flex flex-col items-center border-b border-zinc-800/80 pb-6">
             <Link
               href="/"
               onClick={() => setMobileOpen(false)}
