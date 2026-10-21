@@ -100,15 +100,13 @@ export default function ProductsCatalog() {
     const origin =
       siteOrigin || (typeof window !== 'undefined' ? window.location.origin : '');
     const productUrl = `${origin}/productos?product=${encodeURIComponent(product.id)}`;
-    const imageUrl = `${origin}${encodeURI(product.image)}`;
     const sizeLine = chosenSize ? `\n• Talla: ${chosenSize}` : '';
     const message =
-      `Hola DRIP HOUSE 🖤, estoy interesado en este producto:\n` +
+      `Hola DRIP HOUSE 🖤, estoy interesado en este producto:\n\n` +
       `• Producto: ${product.name} (${product.brand})\n` +
       `• Referencia: ${product.id.toUpperCase()}${sizeLine}\n` +
       `• Precio: ${formatCOP(product.price)}\n` +
-      `• Ver producto: ${productUrl}\n` +
-      `• Imagen: ${imageUrl}`;
+      `• Ver producto: ${productUrl}`;
     return `https://wa.me/573017600570?text=${encodeURIComponent(message)}`;
   };
 
