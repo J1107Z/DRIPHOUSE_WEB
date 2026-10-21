@@ -33,7 +33,7 @@ export default function ClientesPage() {
         <div>
           <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-zinc-400">
             <Sparkles className="w-3.5 h-3.5 text-white" />
-            Comunidad Verificada &bull; ./Clientes/
+            Comunidad Verificada &bull; Testimonios Reales
           </span>
           <h1 className="font-gothic text-4xl sm:text-5xl text-white tracking-wide mt-1">
             Clientes Drip House
@@ -92,9 +92,9 @@ export default function ClientesPage() {
               </div>
             </div>
 
-            <div className="px-4 py-3 bg-zinc-950/90 border-t border-zinc-800/80 flex items-center justify-between text-[11px] text-zinc-400">
-              <span className="font-mono">{cliente.image.replace('/Clientes/', '')}</span>
-              <span className="uppercase tracking-widest font-semibold text-zinc-300 group-hover:text-white">
+            <div className="px-4 py-3 bg-zinc-950/90 border-t border-zinc-800/80 flex items-center justify-center text-[11px] text-zinc-400">
+              <span className="inline-flex items-center gap-1.5 uppercase tracking-widest font-semibold text-zinc-300 group-hover:text-white transition">
+                <CheckCircle2 className="w-3.5 h-3.5 text-white" />
                 Compra Verificada ✓
               </span>
             </div>

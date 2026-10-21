@@ -13,6 +13,8 @@ import {
   Tag,
   Layers,
   Ruler,
+  ChevronDown,
+  ChevronUp,
 } from 'lucide-react';
 import {
   BRANDS,
@@ -27,45 +29,78 @@ import { PRODUCTS, formatCOP } from '@/data/products';
 
 type PriceSort = 'default' | 'asc' | 'desc';
 type StockFilter = 'all' | 'inStock' | 'outOfStock';
+type FilterSectionKey = 'marca' | 'categoria' | 'orden' | 'disponibilidad' | 'tallas';
 
 export default function ProductsCatalog() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  // Estados de React para los 5 filtros requeridos + búsqueda
-  const [selectedBrand, setSelectedBrand] = useState<Brand | 'Todas'>('Todas');
+  // Control de apertura del panel general de filtros y de cada acordeón interno
+  const [filtersPanelOpen, setFiltersPanelOpen] = useState(false);
+  const [openSections, setOpenSections] = useState<Record<FilterSectionKey, boolean>>({
+    marca: false,
+    categoria: false,
+    orden: false,
+    disponibilidad: false,
+    tallas: false,
+  });
+
+  // Estados de React para los filtros (soporte multi-selección en Marcas y Tallas)
+  // Un arreglo vacío [] representa la opción "Todas" activa.
+  const [selectedBrands, setSelectedBrands] = useState<Brand[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<Category | 'Todas'>('Todas');
   const [priceSort, setPriceSort] = useState<PriceSort>('default');
   const [stockFilter, setStockFilter] = useState<StockFilter>('all');
-  const [selectedSize, setSelectedSize] = useState<Size | 'Todas'>('Todas');
+  const [selectedSizes, setSelectedSizes] = useState<Size[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeProductModal, setActiveProductModal] = useState<Product | null>(null);
+
+  const toggleSection = (key: FilterSectionKey) => {
+    setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
 
   // Sincronizar el filtro de marca desde el query param ?brand= al entrar desde el Home
   useEffect(() => {
     const brandParam = searchParams.get('brand');
     if (brandParam && BRANDS.includes(brandParam as Brand)) {
-      setSelectedBrand(brandParam as Brand);
+      setSelectedBrands([brandParam as Brand]);
     } else if (!brandParam) {
-      setSelectedBrand('Todas');
+      setSelectedBrands([]);
     }
   }, [searchParams]);
 
-  const handleBrandChange = (brand: Brand | 'Todas') => {
-    setSelectedBrand(brand);
-    if (brand === 'Todas') {
-      router.replace('/productos', { scroll: false });
-    } else {
-      router.replace(`/productos?brand=${encodeURIComponent(brand)}`, { scroll: false });
-    }
+  // Selección de marcas: si se elige "Todas", se limpian las marcas individuales.
+  // Si se eligen marcas individuales, "Todas" queda desactivado automáticamente.
+  const handleSelectAllBrands = () => {
+    setSelectedBrands([]);
+    router.replace('/productos', { scroll: false });
+  };
+
+  const handleToggleBrand = (brand: Brand) => {
+    setSelectedBrands((prev) => {
+      const exists = prev.includes(brand);
+      const next = exists ? prev.filter((b) => b !== brand) : [...prev, brand];
+      return next;
+    });
+  };
+
+  // Selección de tallas: permite múltiples tallas al mismo tiempo o "Todas"
+  const handleSelectAllSizes = () => {
+    setSelectedSizes([]);
+  };
+
+  const handleToggleSize = (size: Size) => {
+    setSelectedSizes((prev) =>
+      prev.includes(size) ? prev.filter((s) => s !== size) : [...prev, size]
+    );
   };
 
   const resetAllFilters = () => {
-    setSelectedBrand('Todas');
+    setSelectedBrands([]);
     setSelectedCategory('Todas');
     setPriceSort('default');
     setStockFilter('all');
-    setSelectedSize('Todas');
+    setSelectedSizes([]);
     setSearchQuery('');
     router.replace('/productos', { scroll: false });
   };
@@ -73,9 +108,9 @@ export default function ProductsCatalog() {
   const filteredProducts = useMemo(() => {
     let result = [...PRODUCTS];
 
-    // 1. Filtro por Marca
-    if (selectedBrand !== 'Todas') {
-      result = result.filter((p) => p.brand === selectedBrand);
+    // 1. Filtro por Marca (múltiples marcas o Todas si está vacío)
+    if (selectedBrands.length > 0) {
+      result = result.filter((p) => selectedBrands.includes(p.brand));
     }
 
     // 2. Filtro por Categoría
@@ -90,9 +125,9 @@ export default function ProductsCatalog() {
       result = result.filter((p) => p.inStock === false);
     }
 
-    // 5. Filtro por Talla (XS, S, M, L, XL)
-    if (selectedSize !== 'Todas') {
-      result = result.filter((p) => p.sizes.includes(selectedSize));
+    // 5. Filtro por Tallas (múltiples tallas o Todas si está vacío)
+    if (selectedSizes.length > 0) {
+      result = result.filter((p) => p.sizes.some((sz) => selectedSizes.includes(sz)));
     }
 
     // Búsqueda opcional por texto
@@ -116,37 +151,48 @@ export default function ProductsCatalog() {
 
     return result;
   }, [
-    selectedBrand,
+    selectedBrands,
     selectedCategory,
     priceSort,
     stockFilter,
-    selectedSize,
+    selectedSizes,
     searchQuery,
   ]);
 
-  const hasActiveFilters =
-    selectedBrand !== 'Todas' ||
-    selectedCategory !== 'Todas' ||
-    priceSort !== 'default' ||
-    stockFilter !== 'all' ||
-    selectedSize !== 'Todas' ||
-    searchQuery.trim() !== '';
+  const activeFiltersCount =
+    (selectedBrands.length > 0 ? 1 : 0) +
+    (selectedCategory !== 'Todas' ? 1 : 0) +
+    (priceSort !== 'default' ? 1 : 0) +
+    (stockFilter !== 'all' ? 1 : 0) +
+    (selectedSizes.length > 0 ? 1 : 0);
+
+  const hasActiveFilters = activeFiltersCount > 0 || searchQuery.trim() !== '';
+
+  const headerTitle =
+    selectedBrands.length === 0
+      ? 'Bóveda de Productos'
+      : selectedBrands.length === 1
+        ? `Colección ${selectedBrands[0]}`
+        : `Colección (${selectedBrands.length} Marcas)`;
 
   return (
-    <div className="px-6 py-8 md:px-12 md:py-12 max-w-7xl mx-auto space-y-8">
+    <div className="px-6 py-8 md:px-12 md:py-12 max-w-7xl mx-auto space-y-6">
       {/* Encabezado de la Bóveda de Productos */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-zinc-800/80 pb-6">
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-zinc-400">
-            Catálogo Oficial &bull; Filtros Dinámicos
+            Catálogo Oficial &bull; Mostrando{' '}
+            <strong className="text-white">{filteredProducts.length}</strong> de{' '}
+            {PRODUCTS.length} piezas
           </p>
           <h1 className="font-gothic text-4xl sm:text-5xl text-white tracking-wide mt-1">
-            {selectedBrand === 'Todas' ? 'Bóveda de Productos' : `Colección ${selectedBrand}`}
+            {headerTitle}
           </h1>
         </div>
 
-        <div className="flex items-center gap-3">
-          <div className="relative flex-1 sm:w-64">
+        <div className="flex flex-wrap items-center gap-2.5">
+          {/* Buscador */}
+          <div className="relative flex-1 sm:w-64 min-w-[200px]">
             <Search className="w-4 h-4 text-zinc-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
@@ -156,6 +202,37 @@ export default function ProductsCatalog() {
               className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-400 transition"
             />
           </div>
+
+          {/* Botón para desplegar/ocultar el apartado de filtros */}
+          <button
+            type="button"
+            onClick={() => setFiltersPanelOpen((prev) => !prev)}
+            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border text-xs font-bold uppercase tracking-wider transition shrink-0 ${
+              filtersPanelOpen || activeFiltersCount > 0
+                ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.18)]'
+                : 'bg-zinc-950 text-zinc-200 border-zinc-800 hover:border-zinc-500 hover:text-white'
+            }`}
+          >
+            <Filter className="w-3.5 h-3.5" />
+            <span>Filtros</span>
+            {activeFiltersCount > 0 && (
+              <span
+                className={`px-1.5 py-0.5 rounded-full text-[10px] leading-none font-black ${
+                  filtersPanelOpen || activeFiltersCount > 0
+                    ? 'bg-black text-white'
+                    : 'bg-zinc-800 text-white'
+                }`}
+              >
+                {activeFiltersCount}
+              </span>
+            )}
+            {filtersPanelOpen ? (
+              <ChevronUp className="w-3.5 h-3.5" />
+            ) : (
+              <ChevronDown className="w-3.5 h-3.5" />
+            )}
+          </button>
+
           {hasActiveFilters && (
             <button
               type="button"
@@ -170,163 +247,304 @@ export default function ProductsCatalog() {
         </div>
       </div>
 
-      {/* Panel de los 5 Filtros Dinámicos Requeridos */}
-      <section
-        aria-label="Filtros de productos"
-        className="marble-card rounded-2xl border border-zinc-800/90 p-5 sm:p-6 space-y-6"
-      >
-        <div className="flex items-center justify-between border-b border-zinc-800/80 pb-3">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-zinc-200">
-            <Filter className="w-4 h-4 text-white" />
-            <span>Filtros del Catálogo</span>
-          </div>
-          <span className="text-xs text-zinc-400">
-            Mostrando <strong className="text-white">{filteredProducts.length}</strong> de{' '}
-            {PRODUCTS.length} piezas
-          </span>
-        </div>
-
-        {/* 1. Filtro por Marca */}
-        <div className="space-y-2.5">
-          <label className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-400">
-            <Tag className="w-3.5 h-3.5 text-zinc-300" />
-            <span>1. Marca</span>
-          </label>
-          <div className="flex flex-wrap gap-2">
+      {/* Panel de Filtros Desplegable por Acción del Usuario */}
+      {filtersPanelOpen && (
+        <section
+          aria-label="Filtros de productos"
+          className="marble-card rounded-2xl border border-zinc-800/90 divide-y divide-zinc-800/80 overflow-hidden"
+        >
+          {/* 1. Acordeón: Marca (Multi-selección o Todas) */}
+          <div>
             <button
               type="button"
-              onClick={() => handleBrandChange('Todas')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition border ${
-                selectedBrand === 'Todas'
-                  ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
-                  : 'bg-zinc-950/90 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
-              }`}
+              onClick={() => toggleSection('marca')}
+              className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-zinc-900/50 transition"
             >
-              Todas
+              <div className="flex items-center gap-2.5">
+                <Tag className="w-4 h-4 text-zinc-300" />
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-white">
+                  Marca
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-[11px] text-zinc-400">
+                  {selectedBrands.length === 0
+                    ? 'Todas'
+                    : selectedBrands.join(', ')}
+                </span>
+                {openSections.marca ? (
+                  <ChevronUp className="w-4 h-4 text-zinc-400" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-zinc-400" />
+                )}
+              </div>
             </button>
-            {BRANDS.map((brand) => (
-              <button
-                key={brand}
-                type="button"
-                onClick={() => handleBrandChange(brand)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition border ${
-                  selectedBrand === brand
-                    ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
-                    : 'bg-zinc-950/90 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
-                }`}
-              >
-                {brand}
-              </button>
-            ))}
-          </div>
-        </div>
 
-        {/* Fila de Filtros 2, 3, 4 y 5 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 pt-2 border-t border-zinc-900">
-          {/* 2. Filtro por Categoría */}
-          <div className="space-y-2">
-            <label
-              htmlFor="filter-category"
-              className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-400"
-            >
-              <Layers className="w-3.5 h-3.5 text-zinc-300" />
-              <span>2. Categoría</span>
-            </label>
-            <select
-              id="filter-category"
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value as Category | 'Todas')}
-              className="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-xs font-medium text-white focus:outline-none focus:border-zinc-400 transition"
-            >
-              <option value="Todas">Todas las Categorías</option>
-              {CATEGORIES.map((category) => (
-                <option key={category} value={category}>
-                  {category}
-                </option>
-              ))}
-            </select>
+            {openSections.marca && (
+              <div className="px-5 pb-5 pt-1 space-y-2.5">
+                <p className="text-[11px] text-zinc-400">
+                  Puedes seleccionar varias marcas al mismo tiempo, o elegir{' '}
+                  <strong className="text-zinc-200">Todas</strong> para mostrar todo el catálogo.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={handleSelectAllBrands}
+                    className={`px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition border ${
+                      selectedBrands.length === 0
+                        ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                        : 'bg-zinc-950/90 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
+                    }`}
+                  >
+                    Todas
+                  </button>
+                  {BRANDS.map((brand) => {
+                    const isSelected = selectedBrands.includes(brand);
+                    return (
+                      <button
+                        key={brand}
+                        type="button"
+                        onClick={() => handleToggleBrand(brand)}
+                        className={`px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition border ${
+                          isSelected
+                            ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                            : 'bg-zinc-950/90 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
+                        }`}
+                      >
+                        {brand}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
           </div>
 
-          {/* 3. Filtro por Precio (Ordenamiento) */}
-          <div className="space-y-2">
-            <label
-              htmlFor="filter-price"
-              className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-400"
+          {/* 2. Acordeón: Categoría */}
+          <div>
+            <button
+              type="button"
+              onClick={() => toggleSection('categoria')}
+              className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-zinc-900/50 transition"
             >
-              <ArrowUpDown className="w-3.5 h-3.5 text-zinc-300" />
-              <span>3. Ordenar por Precio</span>
-            </label>
-            <select
-              id="filter-price"
-              value={priceSort}
-              onChange={(e) => setPriceSort(e.target.value as PriceSort)}
-              className="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-xs font-medium text-white focus:outline-none focus:border-zinc-400 transition"
-            >
-              <option value="default">Orden Predeterminado</option>
-              <option value="asc">Precio: Menor a Mayor</option>
-              <option value="desc">Precio: Mayor a Menor</option>
-            </select>
-          </div>
+              <div className="flex items-center gap-2.5">
+                <Layers className="w-4 h-4 text-zinc-300" />
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-white">
+                  Categoría
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-[11px] text-zinc-400">{selectedCategory}</span>
+                {openSections.categoria ? (
+                  <ChevronUp className="w-4 h-4 text-zinc-400" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-zinc-400" />
+                )}
+              </div>
+            </button>
 
-          {/* 4. Filtro por Disponibilidad */}
-          <div className="space-y-2">
-            <label
-              htmlFor="filter-stock"
-              className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-400"
-            >
-              <CheckCircle2 className="w-3.5 h-3.5 text-zinc-300" />
-              <span>4. Disponibilidad</span>
-            </label>
-            <select
-              id="filter-stock"
-              value={stockFilter}
-              onChange={(e) => setStockFilter(e.target.value as StockFilter)}
-              className="w-full px-3.5 py-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-xs font-medium text-white focus:outline-none focus:border-zinc-400 transition"
-            >
-              <option value="all">Todos (En existencia y Agotados)</option>
-              <option value="inStock">En existencia</option>
-              <option value="outOfStock">Agotado</option>
-            </select>
-          </div>
-
-          {/* 5. Filtro por Talla (XS, S, M, L, XL) */}
-          <div className="space-y-2">
-            <span className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-400">
-              <Ruler className="w-3.5 h-3.5 text-zinc-300" />
-              <span>5. Talla</span>
-            </span>
-            <div className="flex items-center gap-1.5">
-              <button
-                type="button"
-                onClick={() => setSelectedSize('Todas')}
-                className={`px-2.5 py-2 rounded-lg text-[11px] font-bold uppercase transition border ${
-                  selectedSize === 'Todas'
-                    ? 'bg-white text-black border-white'
-                    : 'bg-zinc-950 text-zinc-400 border-zinc-800 hover:border-zinc-600 hover:text-white'
-                }`}
-              >
-                Todas
-              </button>
-              {SIZES.map((size) => (
+            {openSections.categoria && (
+              <div className="px-5 pb-5 pt-1 flex flex-wrap gap-2">
                 <button
-                  key={size}
                   type="button"
-                  onClick={() =>
-                    setSelectedSize(selectedSize === size ? 'Todas' : size)
-                  }
-                  className={`flex-1 py-2 rounded-lg text-[11px] font-bold uppercase transition border ${
-                    selectedSize === size
-                      ? 'bg-white text-black border-white shadow-[0_0_12px_rgba(255,255,255,0.2)]'
-                      : 'bg-zinc-950 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
+                  onClick={() => setSelectedCategory('Todas')}
+                  className={`px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition border ${
+                    selectedCategory === 'Todas'
+                      ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                      : 'bg-zinc-950/90 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
                   }`}
                 >
-                  {size}
+                  Todas
                 </button>
-              ))}
-            </div>
+                {CATEGORIES.map((category) => (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition border ${
+                      selectedCategory === category
+                        ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                        : 'bg-zinc-950/90 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
-        </div>
-      </section>
+
+          {/* 3. Acordeón: Orden */}
+          <div>
+            <button
+              type="button"
+              onClick={() => toggleSection('orden')}
+              className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-zinc-900/50 transition"
+            >
+              <div className="flex items-center gap-2.5">
+                <ArrowUpDown className="w-4 h-4 text-zinc-300" />
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-white">
+                  Orden
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-[11px] text-zinc-400">
+                  {priceSort === 'default'
+                    ? 'Predeterminado'
+                    : priceSort === 'asc'
+                      ? 'Menor a Mayor'
+                      : 'Mayor a Menor'}
+                </span>
+                {openSections.orden ? (
+                  <ChevronUp className="w-4 h-4 text-zinc-400" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-zinc-400" />
+                )}
+              </div>
+            </button>
+
+            {openSections.orden && (
+              <div className="px-5 pb-5 pt-1 flex flex-wrap gap-2">
+                {[
+                  { value: 'default', label: 'Orden Predeterminado' },
+                  { value: 'asc', label: 'Precio: Menor a Mayor' },
+                  { value: 'desc', label: 'Precio: Mayor a Menor' },
+                ].map((opt) => (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    onClick={() => setPriceSort(opt.value as PriceSort)}
+                    className={`px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition border ${
+                      priceSort === opt.value
+                        ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                        : 'bg-zinc-950/90 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* 4. Acordeón: Disponibilidad */}
+          <div>
+            <button
+              type="button"
+              onClick={() => toggleSection('disponibilidad')}
+              className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-zinc-900/50 transition"
+            >
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="w-4 h-4 text-zinc-300" />
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-white">
+                  Disponibilidad
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-[11px] text-zinc-400">
+                  {stockFilter === 'all'
+                    ? 'Todos'
+                    : stockFilter === 'inStock'
+                      ? 'En existencia'
+                      : 'Agotado'}
+                </span>
+                {openSections.disponibilidad ? (
+                  <ChevronUp className="w-4 h-4 text-zinc-400" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-zinc-400" />
+                )}
+              </div>
+            </button>
+
+            {openSections.disponibilidad && (
+              <div className="px-5 pb-5 pt-1 flex flex-wrap gap-2">
+                {[
+                  { value: 'all', label: 'Todos (En existencia y Agotados)' },
+                  { value: 'inStock', label: 'En existencia' },
+                  { value: 'outOfStock', label: 'Agotado' },
+                ].map((opt) => (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    onClick={() => setStockFilter(opt.value as StockFilter)}
+                    className={`px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition border ${
+                      stockFilter === opt.value
+                        ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                        : 'bg-zinc-950/90 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* 5. Acordeón: Tallas (Multi-selección o Todas) */}
+          <div>
+            <button
+              type="button"
+              onClick={() => toggleSection('tallas')}
+              className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-zinc-900/50 transition"
+            >
+              <div className="flex items-center gap-2.5">
+                <Ruler className="w-4 h-4 text-zinc-300" />
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-white">
+                  Tallas
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-[11px] text-zinc-400">
+                  {selectedSizes.length === 0 ? 'Todas' : selectedSizes.join(', ')}
+                </span>
+                {openSections.tallas ? (
+                  <ChevronUp className="w-4 h-4 text-zinc-400" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-zinc-400" />
+                )}
+              </div>
+            </button>
+
+            {openSections.tallas && (
+              <div className="px-5 pb-5 pt-1 space-y-2.5">
+                <p className="text-[11px] text-zinc-400">
+                  Selecciona una o varias tallas simultáneamente.
+                </p>
+                <div className="flex flex-wrap items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={handleSelectAllSizes}
+                    className={`px-3.5 py-2 rounded-lg text-xs font-bold uppercase transition border ${
+                      selectedSizes.length === 0
+                        ? 'bg-white text-black border-white shadow-[0_0_12px_rgba(255,255,255,0.2)]'
+                        : 'bg-zinc-950 text-zinc-400 border-zinc-800 hover:border-zinc-600 hover:text-white'
+                    }`}
+                  >
+                    Todas
+                  </button>
+                  {SIZES.map((size) => {
+                    const isSelected = selectedSizes.includes(size);
+                    return (
+                      <button
+                        key={size}
+                        type="button"
+                        onClick={() => handleToggleSize(size)}
+                        className={`px-4 py-2 rounded-lg text-xs font-bold uppercase transition border ${
+                          isSelected
+                            ? 'bg-white text-black border-white shadow-[0_0_12px_rgba(255,255,255,0.2)]'
+                            : 'bg-zinc-950 text-zinc-300 border-zinc-800 hover:border-zinc-500 hover:text-white'
+                        }`}
+                      >
+                        {size}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Cuadrícula de Productos */}
       {filteredProducts.length === 0 ? (
@@ -424,7 +642,7 @@ export default function ProductsCatalog() {
                         <span
                           key={sz}
                           className={`px-1.5 py-0.5 rounded text-[10px] font-semibold border ${
-                            selectedSize === sz
+                            selectedSizes.includes(sz)
                               ? 'bg-white text-black border-white'
                               : 'bg-zinc-900/90 text-zinc-300 border-zinc-800'
                           }`}
