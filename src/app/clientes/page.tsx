@@ -122,9 +122,10 @@ export default function ClientesPage() {
               <button
                 type="button"
                 onClick={() => setSelectedItem(null)}
-                className="px-3 py-1 rounded bg-zinc-900 border border-zinc-700 text-xs text-zinc-300 hover:text-white"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-500 text-xs font-bold uppercase tracking-widest text-white hover:bg-white hover:text-black hover:border-white transition shadow-[0_0_12px_rgba(255,255,255,0.08)]"
               >
-                Cerrar ✕
+                <span>Cerrar</span>
+                <span aria-hidden="true">✕</span>
               </button>
             </div>
             <div className="bg-black max-h-[75vh] flex items-center justify-center overflow-hidden">

@@ -193,32 +193,32 @@ export default function ContactoPage() {
         </div>
 
         {/* Columna 2: Instagram y Correo Electrónico */}
-        <div className="space-y-6">
+        <div className="space-y-6 min-w-0">
           {/* Instagram */}
           <a
             href="https://www.instagram.com/driphouse_imports/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group marble-card block rounded-2xl border border-zinc-800/90 p-6 sm:p-8 hover:border-zinc-400 transition-all"
+            className="group marble-card block rounded-2xl border border-zinc-800/90 p-5 sm:p-8 hover:border-zinc-400 transition-all overflow-hidden"
           >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white group-hover:bg-white group-hover:text-black transition">
+            <div className="flex items-start justify-between gap-3 sm:gap-4">
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0 flex-1">
+                <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white group-hover:bg-white group-hover:text-black transition shrink-0">
                   <InstagramIcon className="w-6 h-6" />
                 </div>
-                <div>
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-zinc-400">
+                <div className="min-w-0 flex-1">
+                  <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-zinc-400 leading-snug">
                     Red Social Oficial
                   </span>
-                  <h2 className="text-lg font-bold text-white mt-0.5">
+                  <h2 className="text-base sm:text-lg font-bold text-white mt-0.5 truncate">
                     @driphouse_imports
                   </h2>
-                  <p className="text-xs text-zinc-400 mt-1">
-                    https://www.instagram.com/driphouse_imports/
+                  <p className="text-[11px] sm:text-xs text-zinc-400 mt-1 truncate">
+                    instagram.com/driphouse_imports
                   </p>
                 </div>
               </div>
-              <ExternalLink className="w-5 h-5 text-zinc-500 group-hover:text-white transition" />
+              <ExternalLink className="w-5 h-5 text-zinc-500 group-hover:text-white transition shrink-0 mt-1" />
             </div>
             <p className="mt-4 text-xs text-zinc-300 leading-relaxed border-t border-zinc-800/80 pt-4">
               Síguenos en Instagram para conocer los nuevos drops, historias de clientes
@@ -229,18 +229,18 @@ export default function ContactoPage() {
           {/* Correo Electrónico */}
           <a
             href="mailto:contacto@driphouse.com"
-            className="group marble-card block rounded-2xl border border-zinc-800/90 p-6 sm:p-8 hover:border-zinc-400 transition-all"
+            className="group marble-card block rounded-2xl border border-zinc-800/90 p-5 sm:p-8 hover:border-zinc-400 transition-all overflow-hidden"
           >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white group-hover:bg-white group-hover:text-black transition">
+            <div className="flex items-start justify-between gap-3 sm:gap-4">
+              <div className="flex items-center gap-3.5 sm:gap-4 min-w-0 flex-1">
+                <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white group-hover:bg-white group-hover:text-black transition shrink-0">
                   <Mail className="w-6 h-6" />
                 </div>
-                <div>
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-zinc-400">
+                <div className="min-w-0 flex-1">
+                  <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] sm:tracking-[0.3em] text-zinc-400 leading-snug">
                     Correo Electrónico Oficial
                   </span>
-                  <h2 className="text-lg font-bold text-white mt-0.5">
+                  <h2 className="text-sm sm:text-lg font-bold text-white mt-0.5 truncate">
                     contacto@driphouse.com
                   </h2>
                   <p className="text-xs text-zinc-400 mt-1">
@@ -248,7 +248,7 @@ export default function ContactoPage() {
                   </p>
                 </div>
               </div>
-              <ExternalLink className="w-5 h-5 text-zinc-500 group-hover:text-white transition" />
+              <ExternalLink className="w-5 h-5 text-zinc-500 group-hover:text-white transition shrink-0 mt-1" />
             </div>
           </a>
 

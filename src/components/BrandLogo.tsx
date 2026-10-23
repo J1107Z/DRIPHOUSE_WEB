@@ -7,7 +7,7 @@ interface BrandLogoProps {
 }
 
 const BRAND_LOGO_IMAGES: Partial<Record<Brand, string>> = {
-  Godspeed: '/Logos Marcas/GODSPEED.jpg',
+  Godspeed: '/Logos Marcas/GODSPEED.jpg?v=2',
   Jordan: '/Logos Marcas/JORDAN.jpg',
   Nike: '/Logos Marcas/NIKE.jpg',
   'Life Hustlers': '/Logos Marcas/LIFE_HUSTLERS.png',

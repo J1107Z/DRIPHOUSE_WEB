@@ -822,7 +822,7 @@ export default function ProductsCatalog() {
           onClick={() => setActiveProductModal(null)}
         >
           <div
-            className="marble-card max-w-2xl w-full rounded-2xl border border-zinc-700 overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-2xl"
+            className="marble-card max-w-2xl w-full max-h-[90vh] overflow-y-auto rounded-2xl border border-zinc-700 grid grid-cols-1 md:grid-cols-2 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="aspect-square bg-black relative">
@@ -834,16 +834,17 @@ export default function ProductsCatalog() {
             </div>
             <div className="p-6 flex flex-col justify-between space-y-5">
               <div className="space-y-3">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-2">
                   <span className="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-700 text-[10px] font-bold uppercase tracking-widest text-white">
                     {activeProductModal.brand}
                   </span>
                   <button
                     type="button"
                     onClick={() => setActiveProductModal(null)}
-                    className="text-xs uppercase tracking-widest text-zinc-400 hover:text-white"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-500 text-xs font-bold uppercase tracking-widest text-white hover:bg-white hover:text-black hover:border-white transition shadow-[0_0_12px_rgba(255,255,255,0.08)]"
                   >
-                    Cerrar ✕
+                    <span>Cerrar</span>
+                    <span aria-hidden="true">✕</span>
                   </button>
                 </div>
                 <h3 className="text-lg font-bold text-white leading-snug">

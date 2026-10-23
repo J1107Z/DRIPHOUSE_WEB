@@ -4,7 +4,7 @@
   :root {
     --bg-obsidian: #070708;
     --bg-marble-dark: #111114;
-    --text-ivory: #f4f4f6;
+    --text-ivory: #eeeeee;
     --text-silver: #a1a1aa;
   }
 
@@ -14,6 +14,22 @@
     font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
   }
+}
+
+/* Tonalidad blanco suave (#EEEEEE) para las letras blancas */
+.text-white,
+.text-zinc-100 {
+  color: #eeeeee;
+}
+
+.hover\:text-white:hover,
+.group:hover .group-hover\:text-white {
+  color: #eeeeee;
+}
+
+.hover\:text-black:hover,
+.group:hover .group-hover\:text-black {
+  color: #000000;
 }
 
 .font-gothic {

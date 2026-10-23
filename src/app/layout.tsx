@@ -117,7 +117,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="marble-bg min-h-screen text-zinc-100 antialiased selection:bg-white selection:text-black"
+        className="marble-bg min-h-screen text-[#EEEEEE] antialiased selection:bg-white selection:text-black"
       >
         <div className="flex min-h-screen" suppressHydrationWarning>
           <Sidebar />
